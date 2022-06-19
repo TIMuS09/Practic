@@ -115,7 +115,7 @@ body {
 
 .feynman {
     height: 890px;
-    background-image: url('img/feynman.png');
+    background-image: url('./img/feynman.png');
     background-repeat: no-repeat;
     background-position: bottom left;
     position: relative;
@@ -172,7 +172,7 @@ body {
         }
         &:after {
             content: '';
-            background-image: url('img/kaufman-triangle.svg');
+            background-image: url('./img/kaufman-triangle.svg');
             background-size: cover;
             width: 877px;
             height: 877px;
