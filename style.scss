@@ -1,0 +1,188 @@
+$blue: #2f80ed;
+$fw7: 700;
+$gray: #f2f2f2;
+
+@import '_null';
+@import '_header';
+@import '_footer';
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.page {
+    min-width: 1100px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.description {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+    h3 {
+        color: #2f80ed;
+        width: 175px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    &__main-text {
+        width: 80%;
+        min-width: 784px;
+        line-height: 34px;
+        font-size: 24px;
+        span {
+            font-weight: $fw7;
+        }
+        p + p {
+            margin-top: 30px;
+        }
+    }
+}
+
+.title {
+    font-size: 60px;
+    line-height: 1.15;
+    font-weight: $fw7;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.subtitle {
+    font-size: 24px;
+    line-height: 34px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.table {
+    display: flex;
+    width: 1100px;
+    flex-flow: wrap;
+    justify-content: space-between;
+    &-cell {
+        h3 {
+            font-size: 24px;
+            line-height: 1.15;
+            font-weight: $fw7;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.digits {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 100px;
+    &__subtitle {
+        margin-bottom: 60px;
+    }
+    .table {
+        display: flex;
+        width: 1100px;
+        flex-flow: wrap;
+        justify-content: space-between;
+        &-cell {
+            width: 250px;
+            h3 {
+                font-size: 24px;
+                line-height: 1.15;
+                font-weight: $fw7;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+            .text {
+                margin-bottom: 20px;
+            }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+.feynman {
+    height: 890px;
+    background-image: url('./img/feynman.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: relative;
+    background-color: $gray;
+    z-index: 1;
+    h2 {
+        padding-top: 100px;
+        text-align: center;
+        width: 658px;
+        font-size: 120px;
+        line-height: 1.15;
+        font-weight: $fw7;
+        margin: 0 auto;
+        margin-bottom: 70px;
+    }
+    p {
+        font-size: 36px;
+        line-height: 51px;
+        text-align: center;
+    }
+    div {
+        font-size: 36px;
+        line-height: 51px;
+        position: absolute;
+        right: 48px;
+        top: 50%;
+        a {
+            color: $blue;
+        }
+    }
+}
+
+.kaufman {
+    padding: 90px 0;
+    background-color: #1f1f1f;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .table {
+        &-cell {
+            position: relative;
+            z-index: 1;
+            width: 200px;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                margin-bottom: 80px;
+            }
+        }
+        &:after {
+            content: '';
+            background-image: url('./img/kaufman-triangle.svg');
+            background-size: cover;
+            width: 877px;
+            height: 877px;
+            position: absolute;
+            right: -210px;
+            top: -11px;
+            z-index: 0;
+        }
+    }
+    .subtitle {
+        margin-bottom: 80px;
+    }
+}
